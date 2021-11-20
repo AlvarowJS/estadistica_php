@@ -13,14 +13,17 @@ $lista = [
   1
 ];
 $listaCount = [];
-$elemento1 = array_map(
-  function($elemento){ 
-  if($listaCount[$elemento])
-    {$listaCount[$elemento] += 1;}
-  else
-    {$listaCount[$elemento] =1;}
-  },
-  $lista);
-echo $elemento1;
+function elemento ($elemento){
+  
+    if($listaCount[$elemento])
+      return $listaCount[$elemento] += 1;
+    else
+      return $listaCount[$elemento] = 1;
+  
+}
 
+$elemento1 = array_map("elemento", $lista);
+echo '</pre>';
+var_dump($elemento1);
+echo '</pre>';
 ?>
