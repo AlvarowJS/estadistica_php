@@ -33,19 +33,8 @@ function calcularMediana(...$lista){
   return $mediana;
 }
 
-echo calcularMediana(100,200,500,400000000);
 
-function calcularMediaAritmetica(...$lista) {
-  $sumaLista = array_reduce(
-    $lista,
-    function ($valorAcumulado, $nuevoElemento){
-      return $valorAcumulado + $nuevoElemento;
-    }
-  );
-  $promedioLista = $sumaLista / count($lista);
-  return $promedioLista;
 
-}
 
 
 ?>

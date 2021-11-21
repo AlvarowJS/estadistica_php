@@ -23,7 +23,11 @@ function elemento ($elemento){
 }
 
 $elemento1 = array_map("elemento", $lista);
-echo '</pre>';
-var_dump($elemento1);
-echo '</pre>';
+
+$listaArray = get_object_vars($listaCount)
+$sort = sort(
+  function ($elementoA, $elementoB){
+    return $elementoA - $elementoB;
+  }
+);
 ?>
