@@ -1,31 +1,31 @@
 <?php 
-function calcularMediaAritmetica(...$lista)
+error_reporting(0);
+$array = $_POST['numeros'];
+function calcularMediaAritmetica($lista)
 {
-  //$sumaLista = 0;
-  //for($i=0; $i< count($lista); $i++)
-  //{
-  //  $sumaLista = $sumaLista + $lista[$i];
-  //}
-  
+  $arr = explode(",",$lista); 
+
+  /*
+  $acumula = 0;
+  foreach($arr as $valor){
+    
+  }
+   */
+
+   
   $sumaLista = array_reduce(
-    $lista,
+    $arr,
     function ($valorAcumulado, $nuevoElemento){
       return (float)$valorAcumulado + (float)$nuevoElemento;
     }
   );
  
 
-  $promedioLista = (float)$sumaLista / (float)count($lista);
-  echo $promedioLista;
-  echo "<br>";
+  $promedioLista = (float)$sumaLista / (int)count($arr);
 
   return $promedioLista;
+   
 }
-$array = $_POST['numeros'];
-echo $array;
-echo "<br>El resultado es con arrray es: ";
-echo calcularMediaAritmetica($array);
-echo "<br>El resultado es: ";
+//$array = array($_POST['numeros']);
 
-echo calcularMediaAritmetica(1,2,3,4); 
 ?>
